@@ -1,8 +1,10 @@
 /* eslint-disable @next/next/no-sync-scripts */
 import { AppProps } from 'next/app'
 import Head from 'next/head'
-
+import NextProgress from 'nextjs-progressbar'
 import GlobalStyles from 'styles/global'
+
+import SEO from '../../next-seo-config'
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -31,6 +33,12 @@ function App({ Component, pageProps }: AppProps) {
         ></script>
       </Head>
       <GlobalStyles />
+      <NextProgress
+        color="#e20e8d"
+        startPosition={0.3}
+        stopDelayMs={200}
+        height={3}
+      />
       <Component {...pageProps} />
     </>
   )

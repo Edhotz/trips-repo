@@ -7,7 +7,6 @@ import { GET_PLACES, GET_PLACE_BY_SLUG } from 'graphql/querys'
 export default function Place({ place }: PlaceTemplateProps) {
   const router = useRouter()
 
-  // retorna um loading, qq coisa enquanto tá sendo criado
   if (router.isFallback) return null
 
   return <PlacesTemplate place={place} />
